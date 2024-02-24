@@ -10,8 +10,12 @@ public class Gato extends SerVivo{
    void ronronear(){
      System.out.println("Grrrggeerrrrr");
    }
+   void asearse(){
+    System.out.println("El cato se esta acicalando");
+   }
     void comunicar(){
       maullar();
       ronronear();
+      asearse();
   }
  }

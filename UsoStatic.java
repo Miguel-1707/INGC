@@ -9,5 +9,6 @@ class UsoStatic{
         System.out.println("Potencia");
         v2=io.nextFloat();
         System.out.println(v1+"^"+v2+"="+Math.pow(v1,v2));
+        io.close();
     }
 }

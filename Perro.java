@@ -11,7 +11,11 @@ public class Perro extends SerVivo{
         System.out.println("¡Snif! ¡Snif!");
     }
 
-    void interactuar(){
+    void moverCola(){
+        System.out.println("El perro esta moviendo la colas");
+    }
+
+    void comunicar(){
         ladrar();
         olfatear();
     }
