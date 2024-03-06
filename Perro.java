@@ -18,6 +18,7 @@ public class Perro extends SerVivo{
     void comunicar(){
         ladrar();
         olfatear();
+        moverCola();
     }
 
 }
