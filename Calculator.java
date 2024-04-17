@@ -1,13 +1,14 @@
 import java.awt.*;
+import java.awt.event.*;
 
-class Calculator{
+class Calculator implements ActionListener{
     Frame f;
     TextField tf;
     Panel p1, p2;
     Button b1;
     Button teclado [];
     String[] nombreBotones = {
-        "√", "x²", "%", "/", "7","8","9","*", "4","5","6","-","1","2","3","+", "+/-","0",".","C" //
+        "√", "x²", "%", "/", "7","8","9","*", "4","5","6","-","1","2","3","+", "+/-","0",".","C" 
     };
     
 
@@ -19,6 +20,7 @@ class Calculator{
 
         b1= new Button("=");
         teclado = new Button[20];
+        teclado[20].addActionListener(this); //Escucha al boton
 
         p1.setLayout(new GridLayout(5, 4, 5, 5));
 
@@ -43,6 +45,9 @@ class Calculator{
         f.setSize(600, 400);
         f.setResizable(false);
         f.setVisible(true);
+    }
+    public void actionPermormed(ActionEvent evento){
+        System.out.println("Presionaste un boton");
     }
 
     public static void main(String[] args) {
