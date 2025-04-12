@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Agregar Empleado</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Agregar Empleado</h1>
+        <nav>
+            <ul>
+                <li class="dropdown">
+                    <a href="#" id="config-btn"><i class="fas fa-cog"></i></a>
+                    <div class="dropdown-content" id="config-panel">
+                        <label for="lang-select">Idioma</label>
+                        <select id="lang-select">
+                            <option value="es">Español</option>
+                            <option value="en">English</option>
+                        </select>
+
+                        <label for="clock-toggle">
+                            <input type="checkbox" id="clock-toggle" checked> Mostrar reloj
+                        </label>
+                    </div>
+                </li>
+                <li>
+                    <button id="theme-toggle"><i class="fas fa-moon"></i></button>
+                </li>
+                <li onclick="window.location.href='principal.html'">
+                <i class="fas fa-sign-out-alt icon"></i></li>
+            </ul>
+        </nav>
+    </header>
+
+    <form class="form-agregar-editar" id="form-agregar">
+        <input type="text" placeholder="Nombre" required>
+        <input type="text" placeholder="Apellidos" required>
+        <input type="text" placeholder="Código de empleado" required>
+        <input type="text" placeholder="Puesto" required>
+        <input type="text" placeholder="Horario" required>
+        <input type="email" placeholder="Correo" required>
+        <input type="tel" placeholder="Teléfono" required>
+        <button type="submit">Agregar</button>
+    </form>
+
+    <script>
+        document.getElementById("form-agregar").addEventListener("submit", (e) => {
+            e.preventDefault();
+            alert("Empleado agregado (simulado)");
+        });
+    </script>
+</body>
+</html>

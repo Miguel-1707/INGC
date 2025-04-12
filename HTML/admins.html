@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Administración</title>
+</head>
+<body>
+    <header>
+        <h1>Bienvenido administrador</h1>
+        <nav>
+            <ul>
+                <li class="dropdown">
+                    <a href="#" id="config-btn"><i class="fas fa-cog"></i></a>
+                    <div class="dropdown-content" id="config-panel">
+                        <label for="lang-select">Idioma</label>
+                        <select id="lang-select">
+                            <option value="es">Español</option>
+                            <option value="en">English</option>
+                        </select>
+
+                        <label for="clock-toggle">
+                            <input type="checkbox" id="clock-toggle" checked> Mostrar reloj
+                        </label>
+                    </div>
+                </li>
+                <li>
+                    <button id="theme-toggle"><i class="fas fa-moon"></i></button>
+                </li>
+                <li onclick="window.location.href='principal.html'">
+                <i class="fas fa-sign-out-alt icon"></i></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="admin-container">
+        <!-- seccion de los graficos y estadisticas -->
+        <section>
+            <h2>Estadisticas de accesos</h2>
+            <p>Resumen de ingresos y egresos.</p>
+            <div class="chart-container">
+                <!-- graficas de entradas y salidas -->
+                 <p>[Grafica de entradas/salidas]</p>
+            </div>
+        </section>
+
+        <section id="reportes">
+            <h2>Reportes periodicos</h2>
+            <button>Generar Reporte diario</button>
+            <button>Generar Reporte Semanal</button>
+        </section>
+        
+        <section class="admin-section">
+            <h2>Gestion de los empleados</h2>
+
+            <div class="busqueda-empleado">
+                <form id="form-busqueda">
+                <label for="busqueda-empleado">Buscador de empleados: </label>
+                <input type="text" id="busqueda-empleado" placeholder="Buscar empleado por codigo o nombres">
+                <button type="submit" id="btn-buscar">Buscar</button>
+                </form>
+            </div>
+
+            <div class="resultado-busqueda" style="display: none;">
+                <p>Empleado encontrado: <span id="datos-empleado">[Nombre-empleado, Codigo-empleado]</span></p>
+                <button id="btn-editar">Editar</button>
+                <button id="btn-eliminar">Eliminar</button>
+            </div>
+
+            <div id="no-encontrado" style="display: none;">
+                <p>Empleado no encontrado</p>
+                <p>No se encontro ningun empleado con estos datos.</p>
+            </div>
+
+            <div class="agregar-empleado">
+                <button id="btn-agregar">Agregar nuevo empleado</button>
+            </div>
+        </section>
+
+        <section class="solicitudes">
+            <div id="solicitudes-visitas">
+                <h2>Solicitudes de visitas</h2>
+                <p>[Lista de solicitudes]</p>
+                <button id="btn-aprobar">Aprobar</button>
+                <button id="btn-denegar">Denegar</button>
+            </div>
+
+        </section>
+    </main>
+
+    <script src="/Js/admins.js"></script>
+</body>
+</html>

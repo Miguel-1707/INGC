@@ -1,0 +1,545 @@
+:root{
+    --color-primary: #23B7F6;
+    --color-secondary: #1E9ED4; 
+    --color-tertiary: #23BCFF; 
+    /* Colores de contraste */
+    --color-dark-1: #1984B3;
+    --color-dark-2: #146B91;
+    --color-dark-3: #0F526F;
+    --color-dark-4: #072c3b;
+}
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--color-dark-3    );
+    /* display: flex; */
+    /* flex-direction: column; */
+    height: 100vh;
+}
+
+#reloj{
+    width: 100%;
+    height:60px;
+    background-color: #e0f7ff;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    font-size: 1.5rem;
+    font-weight:bold;
+    color:#146B91;
+    margin-bottom:20px;
+}
+
+
+.login_container{
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+    width: 420px;
+    text-align: center;
+
+    margin: 80px auto;
+}
+
+h1{
+    color: black;
+    margin:5px 0;
+    font-size: 35px;
+
+}
+
+.input_container{
+    margin-bottom: 20px;
+}
+
+.welcome label{
+    color: black;
+    font-size: 28px;
+    /* margin-bottom: 10px; */
+}
+
+label{
+    display: block;
+    /* margin-bottom: 5px; */
+    color: var(--color-dark-4);
+    font-size:16px;
+}
+
+.input_fields label{
+    margin-top: 7px;
+    text-align: left;
+    font-weight: bold;
+}
+
+input[type="text"],input[type="password"] {
+    width: 100%;
+    padding: 3px;
+    margin: 7px 0;
+    border: 1px solid var(--color-secondary);
+    border-radius: 4px;
+    font-size:16px;
+    outline: none;  
+}
+
+input[type="text"]:focus,input[type="password"]:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 7px var(--color-primary);
+}
+
+button{
+    width: 100%;
+    padding:12px;
+    background-color: var(--color-dark-3);
+    border: none;
+    border-radius:4px ;
+    color: #fff;
+    font-size:16px;
+    cursor:pointer;
+    transition:background-color 0.3s ease;
+}
+
+button:hover{
+    background-color:var(--color-dark-1);
+}
+
+/*Estilo de mensaje de error*/
+
+.error{
+    color:var(--color-tertiary);
+    font-size:14px;
+    margin-top: 10px;
+    display: none;
+}
+
+header{
+background-color: var(--color-dark-2);
+width: 100%;
+padding: 0px 20px;
+text-align: center;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+header h1{
+    color: #23BCFF;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+    margin: 20px 10px;
+}
+
+nav{
+    margin-top:10px;
+
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+ul li{
+    margin: 0 15px;
+}
+
+ul li a{
+    text-decoration: none;
+    color: var(--color-primary);
+    font-size:18px;
+}
+
+.icon{
+    color: rgb(173, 32, 32);
+    font-size: 20px;
+    cursor:pointer;
+}
+
+.dropdown{
+    position: relative;
+}
+
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: var(--color-dark-1);
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+    padding: 10px;
+    border-radius: 8px;
+
+}
+
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+
+.dropdown-content label{
+    color: white;
+    font-size: 14px;
+}
+
+#lang-select, #clock-toggle{
+    width: 100%;
+    padding: 5px;
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+#reloj{
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+
+.principal_container{
+display: flex;
+justify-content: center;
+align-items: center;
+flex-wrap: wrap;
+margin-top: 50px;
+}
+
+.cards{
+    display: flex;
+    gap: 20px;
+    margin-top:80px;
+}
+
+.card{
+    width: 300px;
+    height: 200px;
+    background-color: var(--color-secondary);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease;
+    cursor:pointer;
+    text-align: center;
+    padding: 20px;
+}
+
+.card:hover{
+    background-color: var(--color-primary);
+}
+
+.card h2, .card h3{
+    color: white;
+}
+
+.card p{
+    color: white;
+    margin-top: 10px;
+}
+
+
+#theme-toggle{
+    font-size: 20px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: white;
+    transition: color 0.3s ease;
+    padding-top:0;
+}
+
+#theme-toggle:hover{
+    color: var(--color-tertiary);
+}
+
+#config-panel{
+    display: none;
+}
+
+.hidden{
+    display: none;
+}
+
+#config-btn:hover + #config-panel{
+    display: block;
+}
+
+
+
+
+.empleado-info{
+    max-width: 400px;
+    margin: 40px auto;
+    background-color: #fff;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 0 10px rgba(35,183, 246, 0.2);
+}
+
+.empleado-info h2{
+    text-align:center;
+    color: #1984B3;
+
+}
+
+#form-empleado{
+    display:flex;
+    flex-direction:column;
+
+}
+
+#form-empleado label{
+    margin:10px 0 5px;
+    font-weight:bold;
+}
+
+#form-empleado input{
+    padding:10px;
+    border:1px solid #ccc;
+    border-radius:8px;
+}
+
+#form-empleado button{
+    margin-top:20px;
+    padding:10px;
+    background-color:#1E9ED4;
+    color:white;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+
+#form-empleado button:hover{
+    background-color:#146B91;
+}
+
+.bienvenida{
+    text-align:center;
+    margin-top:30px;
+    font-size:50px;
+    color:var(--color-primary);
+}
+
+
+
+.visitantes-container{
+    max-width: 400px;
+    min-height: 500px;
+    margin: 40px auto;
+    margin-bottom: 40px;
+    background-color: #fff;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 0 10px rgba(35,183, 246, 0.5);
+}
+
+.visitantes-container h3{
+    text-align:center;
+    color: var(--color-dark-4);
+    margin-bottom: 20px;
+}
+
+
+/* estilos admn.html */
+
+/* Estilo general para el contenedor principal */
+.admin-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px;
+}
+
+/* Estilo para las secciones */
+section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Títulos de las secciones */
+section h2 {
+    color: var(--color-dark-2);
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+/* Estilo para el texto descriptivo de las secciones */
+section p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Estilo para los botones dentro de las secciones */
+button {
+    background-color: var(--color-primary);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 15px;
+}
+
+button:hover {
+    background-color: var(--color-secondary);
+}
+
+/* Estilo específico para el formulario de búsqueda de empleados */
+#form-busqueda {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+#form-busqueda input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+}
+
+#form-busqueda button {
+    background-color: var(--color-dark-2);
+    border-radius: 5px;
+    font-size: 16px;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#form-busqueda button:hover {
+    background-color: var(--color-secondary);
+}
+
+/* Estilo para la sección de búsqueda de empleado */
+.busqueda-empleado {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilo para la sección de resultados de búsqueda */
+.resultado-busqueda {
+    margin-top: 15px;
+}
+
+.resultado-busqueda button {
+    margin-top: 10px;
+}
+
+/* Estilo para la sección de empleado no encontrado */
+#no-encontrado {
+    background-color: #ffcccc;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+#no-encontrado p {
+    color: #d9534f;
+}
+
+/* Estilo para el contenedor de solicitudes de visitas */
+.solicitudes {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Estilo para el contenedor de solicitudes */
+#solicitudes-visitas {
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#solicitudes-visitas button {
+    margin-top: 15px;
+    background-color: #28a745;
+}
+
+#solicitudes-visitas button:hover {
+    background-color: #218838;
+}
+
+#solicitudes-visitas #btn-denegar{
+    background-color: #dc3545;
+}
+
+/* Estilo para el contenedor de agregar nuevo empleado */
+.agregar-empleado {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.agregar-empleado button {
+    background-color: #007bff;
+    font-size: 16px;
+}
+
+.agregar-empleado button:hover {
+    background-color: #0056b3;
+}
+
+/* ========== Estilos para formularios de empleados ========== */
+.form-agregar-editar {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 2rem;
+    margin-top: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.form-agregar-editar input {
+    display: block;
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+.form-agregar-editar input:focus {
+    outline: none;
+    border-color: #1984B3;
+    box-shadow: 0 0 5px #23B7F6;
+}
+
+.form-agregar-editar button {
+    display: block;
+    width: 100%;
+    background-color: #1984B3;
+    color: white;
+    padding: 0.9rem;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-agregar-editar button:hover {
+    background-color: #146B91;
+}
